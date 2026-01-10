@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>WDD231 | Home</title>
+  <meta name="description" content="WDD231 course home page with responsive navigation and course list filtering." />
+  <meta name="author" content="Dan Jay Jaring" />
+
+  <!-- Google Font (choose one family) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Normalize (optional, allowed) -->
+  <!-- <link rel="stylesheet" href="styles/normalize.css"> -->
+
+  <!-- Required CSS order -->
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <!-- JS in head w/ defer -->
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/course.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <!-- Use your own svg logo in /images -->
+      <img class="logo" src="images/dj.webp" alt="Site logo" width="44" height="44">
+      <span class="name">Dan Jay Jaring</span>
+    </div>
+
+    <button id="menuButton" class="menu-button" aria-label="Open navigation menu" aria-expanded="false">
+      <span class="menu-icon" aria-hidden="true">☰</span>
+    </button>
+  </header>
+
+  <nav id="siteNav" class="site-nav" aria-label="Main navigation">
+    <a class="nav-link active" href="index.html">Home</a>
+    <a class="nav-link" href="#">Chamber</a>
+    <a class="nav-link" href="#">Final</a>
+  </nav>
+
+  <main class="container">
+    <h1>Home</h1>
+
+    <div class="grid">
+      <section class="card">
+        <h2>About Me</h2>
+        <p>
+          Hello! I’m Dan Jay Jaring. This page is my WDD231 home page with a responsive navigation menu
+          and a dynamic course list.
+        </p>
+      </section>
+      <section class="card profile">
+  <h2>About Me</h2>
+
+  <img
+    src="images/profile.jpg"
+    alt="Photo of Dan Jay Jaring"
+    class="profile-photo"
+    loading="lazy"
+  />
+
+  <p class="profile-caption">
+    Software Development student at BYU–Idaho
+  </p>
+</section>
+
+
+      
+
+      
+
+      <section class="card">
+        <h2>Certificate Courses</h2>
+
+        <div class="filters" role="group" aria-label="Course filters">
+          <button class="filter-btn" data-filter="all" type="button">All Courses</button>
+          <button class="filter-btn" data-filter="wdd" type="button">WDD Courses</button>
+          <button class="filter-btn" data-filter="cse" type="button">CSE Courses</button>
+        </div>
+
+        <p class="credits">
+          Total Credits Shown: <span id="creditTotal">0</span>
+        </p>
+
+        <div id="courseList" class="course-list" aria-live="polite"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-social">
+      <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#" target="_blank" rel="noopener">Facebook</a>
+    </div>
+
+    <p class="footer-copy">
+      &copy; <span id="currentyear"></span> Dan Jay Jaring | Florida, USA
+    </p>
+
+    <p id="lastModified" class="footer-mod"></p>
+  </footer>
+</body>
+</html>
