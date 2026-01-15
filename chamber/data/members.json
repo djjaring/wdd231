@@ -1,0 +1,67 @@
+{
+  "members": [
+    {
+      "name": "River City Coffee Co.",
+      "address": "100 Main St, Jacksonville, FL",
+      "phone": "(904) 555-0101",
+      "website": "https://example.com/rivercitycoffee",
+      "image": "member1.webp",
+      "membership": 3,
+      "notes": "Locally roasted coffee & pastries."
+    },
+    {
+      "name": "Sunshine Solar Solutions",
+      "address": "245 Energy Way, Jacksonville, FL",
+      "phone": "(904) 555-0102",
+      "website": "https://example.com/sunshinesolar",
+      "image": "member2.webp",
+      "membership": 2,
+      "notes": "Residential & commercial solar installs."
+    },
+    {
+      "name": "Bluewater Plumbing",
+      "address": "18 Harbor Dr, Jacksonville, FL",
+      "phone": "(904) 555-0103",
+      "website": "https://example.com/bluewaterplumbing",
+      "image": "member3.webp",
+      "membership": 1,
+      "notes": "Emergency repairs and new installs."
+    },
+    {
+      "name": "First Coast Fitness",
+      "address": "88 Wellness Blvd, Jacksonville, FL",
+      "phone": "(904) 555-0104",
+      "website": "https://example.com/firstcoastfitness",
+      "image": "member4.webp",
+      "membership": 2,
+      "notes": "Training, classes, and community programs."
+    },
+    {
+      "name": "Seaside Graphic Studio",
+      "address": "310 Market St, Jacksonville, FL",
+      "phone": "(904) 555-0105",
+      "website": "https://example.com/seasidegraphics",
+      "image": "member5.webp",
+      "membership": 3,
+      "notes": "Branding and web design for small business."
+    },
+    {
+      "name": "Oak & Stone Realty",
+      "address": "77 Bay St, Jacksonville, FL",
+      "phone": "(904) 555-0106",
+      "website": "https://example.com/oakandstone",
+      "image": "member6.webp",
+      "membership": 1,
+      "notes": "Helping families find homes and rentals."
+    },
+    {
+      "name": "Fresh Market Catering",
+      "address": "52 Garden Ave, Jacksonville, FL",
+      "phone": "(904) 555-0107",
+      "website": "https://example.com/freshmarketcatering",
+      "image": "member7.webp",
+      "membership": 2,
+      "notes": "Catering for events, weddings, and meetings."
+    }
+  ]
+}
