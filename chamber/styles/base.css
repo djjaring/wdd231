@@ -17,17 +17,19 @@ body{
 }
 
 
-a{ color: var(--accent);.hero a,
+a{
+  color: var(--accent);
+}
+
+.hero a,
 .nav a,
 .member-card a{
   color: #0b3a6f; /* darker blue = passes 4.5:1 */
-
 }
 
- 
+a:hover{
+  text-decoration: none;
 }
-
-a:hover{ text-decoration: none; }
 
 
 .skip-link{
