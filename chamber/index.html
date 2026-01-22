@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Jacksonville Chamber | Home</title>
+  <meta name="description" content="Welcome to the Jacksonville Chamber of Commerce. Connect with local businesses, events, and community resources." />
+  <meta name="author" content="Dan Jay Jaring" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Jacksonville Chamber | Home" />
+  <meta property="og:description" content="Connect • Grow • Thrive with the Jacksonville Chamber of Commerce." />
+  <meta property="og:image" content="https://djjaring.github.io/wdd231/chamber/images/jaxchamber.webp" />
+  <meta property="og:url" content="https://djjaring.github.io/wdd231/chamber/index.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+
+  <!-- JS -->
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/weather.js" defer></script>
+  <script src="scripts/spotlights.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="brand">
+      <img src="images/jax-logo.webp" alt="Jacksonville Chamber logo" class="logo" width="48" height="48">
+      <div>
+        <p class="site-title">Jacksonville Chamber</p>
+        <p class="site-tagline">Connect • Grow • Thrive</p>
+      </div>
+    </div>
+
+    <button id="menuBtn" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav">
+      ☰
+    </button>
+
+    <nav id="primaryNav" class="nav" aria-label="Primary">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="discover.html">Discover</a>
+      <a href="join.html">Join</a>
+    </nav>
+  </header>
+
+  <main id="main" class="main">
+    <!-- HERO -->
+    <section class="home-hero" aria-label="Welcome">
+      <picture>
+        <!-- If you later add a bigger hero image, put it here -->
+        <img
+          src="images/jaxchamber.webp"
+          alt="Jacksonville skyline and riverfront"
+          class="home-hero-img"
+          width="1100"
+          height="520"
+          loading="eager"
+        >
+      </picture>
+
+      <div class="home-hero-overlay">
+        <h1>Welcome to the Jacksonville Chamber</h1>
+        <p>Helping local businesses thrive through networking, events, and community partnerships.</p>
+        <a class="cta-btn" href="join.html">Join the Chamber</a>
+      </div>
+    </section>
+
+    <!-- MAIN GRID -->
+    <div class="home-grid">
+      <!-- EVENTS -->
+      <section class="panel events" aria-label="Current events">
+        <h2>Current Events</h2>
+
+        <article class="event">
+          <h3>Business Networking Breakfast</h3>
+          <p class="meta">February 5 • 8:00 AM • Downtown Jacksonville</p>
+          <p>Meet fellow chamber members, share leads, and build relationships over coffee.</p>
+        </article>
+
+        <article class="event">
+          <h3>Small Business Workshop</h3>
+          <p class="meta">February 12 • 6:30 PM • Community Center</p>
+          <p>Learn practical marketing and finance tips to grow your business in 2026.</p>
+        </article>
+
+        <p class="muted-note">More events coming soon on our Discover page.</p>
+      </section>
+
+      <!-- WEATHER -->
+      <section class="panel weather" aria-label="Weather">
+        <h2>Weather</h2>
+
+        <div class="weather-now">
+          <p class="weather-place"><strong>Jacksonville, FL</strong></p>
+          <p class="weather-line">
+            <span id="temp">--</span><span aria-hidden="true">°F</span>
+            <span class="sep" aria-hidden="true">•</span>
+            <span id="desc">Loading...</span>
+          </p>
+        </div>
+
+        <h3 class="forecast-title">3-Day Forecast</h3>
+        <ul id="forecast" class="forecast" aria-live="polite">
+          <!-- JS fills this -->
+        </ul>
+
+        <p class="muted-note">
+          Data from OpenWeatherMap.
+        </p>
+      </section>
+    </div>
+
+    <!-- SPOTLIGHTS -->
+    <section class="panel spotlights" aria-label="Member spotlights">
+      <div class="spotlights-head">
+        <h2>Member Spotlights</h2>
+        <p class="muted-note">Gold & Silver members featured randomly each visit.</p>
+      </div>
+
+      <div id="spotlights" class="spotlights-grid">
+        <!-- JS fills this -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <h2>Contact</h2>
+        <p>Jacksonville Chamber of Commerce</p>
+        <p>123 Business Ave, Jacksonville, FL</p>
+        <p>(904) 555-1234</p>
+        <p><a href="mailto:info@jaxchamber.example">info@jaxchamber.example</a></p>
+      </div>
+
+      <div>
+        <h2>Development</h2>
+        <p>&copy; <span id="year"></span> Jacksonville Chamber</p>
+        <p>Dan Jay Jaring • WDD 231</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
