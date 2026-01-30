@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Jacksonville Chamber | Join</title>
+  <meta name="description" content="Apply to join the Jacksonville Chamber of Commerce." />
+  <meta name="author" content="Dan Jay Jaring" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Jacksonville Chamber | Join" />
+  <meta property="og:description" content="Apply for membership and connect with the Jacksonville Chamber community." />
+  <meta property="og:image" content="https://djjaring.github.io/wdd231/chamber/images/jaxchamber.webp" />
+  <meta property="og:url" content="https://djjaring.github.io/wdd231/chamber/join.html" />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/join.css" />
+
+  <!-- JS -->
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="brand">
+      <img src="images/jax-logo.webp" alt="Jacksonville Chamber logo" class="logo" width="48" height="48">
+      <div>
+        <p class="site-title">Jacksonville Chamber</p>
+        <p class="site-tagline">Connect • Grow • Thrive</p>
+      </div>
+    </div>
+
+    <button id="menuBtn" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav">
+      ☰
+    </button>
+
+    <nav id="primaryNav" class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="discover.html">Discover</a>
+      <a href="join.html" aria-current="page">Join</a>
+    </nav>
+  </header>
+
+  <main id="main" class="main">
+    <section class="hero">
+      <h1>Join the Chamber</h1>
+      <p>Fill out the application form to become a member of the Jacksonville Chamber of Commerce.</p>
+    </section>
+
+    <section class="join-wrapper" aria-label="Membership application and levels">
+      <!-- FORM -->
+      <div class="join-form">
+        <h2>Membership Application</h2>
+
+        <form method="get" action="thankyou.html" class="form">
+          <label>
+            Applicant First Name *
+            <input
+              type="text"
+              name="firstName"
+              required
+              title="Enter your first name"
+              autocomplete="given-name"
+            />
+          </label>
+
+          <label>
+            Applicant Last Name *
+            <input
+              type="text"
+              name="lastName"
+              required
+              title="Enter your last name"
+              autocomplete="family-name"
+            />
+          </label>
+
+          <label>
+            Organizational Title
+            <input
+              type="text"
+              name="orgTitle"
+              title="Only letters, hyphens, and spaces. Minimum 7 characters."
+              autocomplete="organization-title"
+              pattern="^[A-Za-z][A-Za-z -]{6,}$"
+            />
+          </label>
+
+          <label>
+            Email Address *
+            <input
+              type="email"
+              name="email"
+              required
+              title="Enter your email address"
+              autocomplete="email"
+              placeholder="name@example.com"
+            />
+          </label>
+
+          <label>
+            Mobile Phone *
+            <input
+              type="tel"
+              name="mobile"
+              required
+              title="Enter your mobile phone number"
+              autocomplete="tel"
+            />
+          </label>
+
+          <label>
+            Business / Organization Name *
+            <input
+              type="text"
+              name="business"
+              required
+              title="Enter your business or organization name"
+              autocomplete="organization"
+            />
+          </label>
+
+          <label>
+            Membership Level *
+            <select name="membership" required title="Select a membership level">
+              <option value="" selected disabled>Select one…</option>
+              <option value="np">NP Membership (No fee)</option>
+              <option value="bronze">Bronze Membership</option>
+              <option value="silver">Silver Membership</option>
+              <option value="gold">Gold Membership</option>
+            </select>
+          </label>
+
+          <label>
+            Business / Organization Description
+            <textarea
+              name="description"
+              title="Describe your business or organization"
+              rows="5"
+            ></textarea>
+          </label>
+
+          <!-- Timestamp -->
+          <input type="hidden" name="timestamp" id="timestamp" />
+
+          <input type="submit" class="submit-btn" value="Submit Application" />
+        </form>
+      </div>
+
+      <!-- MEMBERSHIP CARDS -->
+      <aside class="join-cards" aria-label="Membership level cards">
+        <h2 class="sr-only">Membership Levels</h2>
+
+        <article class="mcard" data-animate>
+          <h3>NP Membership</h3>
+          <p>For non-profit organizations. No fee.</p>
+          <a href="#" class="card-link" data-modal="npModal">More info</a>
+        </article>
+
+        <article class="mcard" data-animate>
+          <h3>Bronze Membership</h3>
+          <p>Starter benefits and local exposure.</p>
+          <a href="#" class="card-link" data-modal="bronzeModal">More info</a>
+        </article>
+
+        <article class="mcard" data-animate>
+          <h3>Silver Membership</h3>
+          <p>More marketing and event discounts.</p>
+          <a href="#" class="card-link" data-modal="silverModal">More info</a>
+        </article>
+
+        <article class="mcard" data-animate>
+          <h3>Gold Membership</h3>
+          <p>Premium promotion and VIP perks.</p>
+          <a href="#" class="card-link" data-modal="goldModal">More info</a>
+        </article>
+      </aside>
+    </section>
+
+    <!-- MODALS -->
+    <dialog id="npModal" aria-labelledby="npTitle">
+      <h3 id="npTitle">NP Membership Benefits</h3>
+      <ul>
+        <li>No membership fee</li>
+        <li>Directory listing</li>
+        <li>Access to select networking events</li>
+      </ul>
+      <button type="button" class="modal-close">Close</button>
+    </dialog>
+
+    <dialog id="bronzeModal" aria-labelledby="bronzeTitle">
+      <h3 id="bronzeTitle">Bronze Membership Benefits</h3>
+      <ul>
+        <li>Directory listing + basic profile</li>
+        <li>Invitations to member events</li>
+        <li>Monthly newsletter feature rotation</li>
+      </ul>
+      <button type="button" class="modal-close">Close</button>
+    </dialog>
+
+    <dialog id="silverModal" aria-labelledby="silverTitle">
+      <h3 id="silverTitle">Silver Membership Benefits</h3>
+      <ul>
+        <li>Everything in Bronze</li>
+        <li>Training/workshop discounts</li>
+        <li>Event sponsor discounts</li>
+        <li>Enhanced directory listing</li>
+      </ul>
+      <button type="button" class="modal-close">Close</button>
+    </dialog>
+
+    <dialog id="goldModal" aria-labelledby="goldTitle">
+      <h3 id="goldTitle">Gold Membership Benefits</h3>
+      <ul>
+        <li>Everything in Silver</li>
+        <li>Home page spotlight advertising</li>
+        <li>VIP invitations to special events</li>
+        <li>Highest event discounts</li>
+      </ul>
+      <button type="button" class="modal-close">Close</button>
+    </dialog>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <h2>Contact</h2>
+        <p>Jacksonville Chamber of Commerce</p>
+        <p>123 Business Ave, Jacksonville, FL</p>
+        <p>(904) 555-1234</p>
+        <p><a href="mailto:info@jaxchamber.example">info@jaxchamber.example</a></p>
+      </div>
+
+      <div>
+        <h2>Development</h2>
+        <p>&copy; <span id="year"></span> Jacksonville Chamber</p>
+        <p>Dan Jay Jaring • WDD 231</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,97 @@
+/* Layout: small = cards under form, large = cards on right */
+.join-wrapper {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .join-wrapper {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+}
+
+.form {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.form label {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.form input,
+.form select,
+.form textarea {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+.submit-btn {
+  padding: 0.75rem 1rem;
+  border: 0;
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
+
+/* Cards */
+.join-cards {
+  display: grid;
+  gap: 1rem;
+}
+
+.mcard {
+  border: 1px solid #ddd;
+  border-radius: 0.75rem;
+  padding: 1rem;
+
+  /* start hidden for initial animation */
+  opacity: 0;
+  transform: translateY(14px);
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  text-decoration: underline;
+}
+
+/* Initial load animation (not hover) */
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mcard.is-visible {
+  animation: fadeSlideIn 700ms ease forwards;
+}
+
+.mcard.is-visible:nth-child(1) { animation-delay: 0ms; }
+.mcard.is-visible:nth-child(2) { animation-delay: 120ms; }
+.mcard.is-visible:nth-child(3) { animation-delay: 240ms; }
+.mcard.is-visible:nth-child(4) { animation-delay: 360ms; }
+
+/* Dialog */
+dialog {
+  border: none;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  max-width: 520px;
+  width: 90%;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-close {
+  margin-top: 1rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+}

@@ -1,0 +1,23 @@
+.submitted {
+  border: 1px solid #ddd;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  max-width: 820px;
+}
+
+.submitted-list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.submitted-list > div {
+  display: grid;
+  gap: 0.25rem;
+  padding: 0.75rem;
+  border: 1px solid #eee;
+  border-radius: 0.6rem;
+}
+
+dt { font-weight: 800; }
+dd { margin: 0; }
