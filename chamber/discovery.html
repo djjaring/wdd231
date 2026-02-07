@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Jacksonville Chamber | Discover</title>
+  <meta name="description" content="Discover places and local highlights around Jacksonville." />
+  <meta name="author" content="Dan Jay Jaring" />
+
+  <link rel="icon" href="favicon.ico" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+
+  <!-- Module script so you can import from .mjs -->
+  <script type="module" src="scripts/discover.js" defer></script>
+  <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="brand">
+      <img src="images/jax-logo.webp" alt="Jacksonville Chamber logo" class="logo" width="48" height="48">
+      <div>
+        <p class="site-title">Jacksonville Chamber</p>
+        <p class="site-tagline">Connect • Grow • Thrive</p>
+      </div>
+    </div>
+
+    <button id="menuBtn" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav">☰</button>
+
+    <nav id="primaryNav" class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="discover.html" aria-current="page">Discover</a>
+      <a href="join.html">Join</a>
+    </nav>
+  </header>
+
+  <main id="main" class="main">
+    <section class="hero">
+      <h1>Discover Jacksonville</h1>
+      <p>Local places and highlights worth checking out.</p>
+    </section>
+
+    <!-- Visit message area (inline content area option) -->
+    <section class="visit" aria-label="Visitor information">
+      <p id="visitMessage" class="visit-message"></p>
+    </section>
+
+    <section class="discover">
+      <h2 class="sr-only">Places to Discover</h2>
+      <div id="discoverGrid" class="discover-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <h2>Contact</h2>
+        <p>Jacksonville Chamber of Commerce</p>
+        <p>123 Business Ave, Jacksonville, FL</p>
+        <p>(904) 555-1234</p>
+        <p><a href="mailto:info@jaxchamber.example">info@jaxchamber.example</a></p>
+      </div>
+
+      <div>
+        <h2>Development</h2>
+        <p>&copy; <span id="year"></span> Jacksonville Chamber</p>
+        <p>Dan Jay Jaring • WDD 231</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

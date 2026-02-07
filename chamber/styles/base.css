@@ -484,3 +484,137 @@ a:focus-visible{
     grid-template-columns: repeat(3, 1fr);
   }
 }
+/* -----------------------------
+   DISCOVER PAGE additions
+------------------------------ */
+
+/* Visitor message area */
+.visit-message{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: .75rem 1rem;
+  color: var(--text);
+  margin: 1rem 0;
+}
+
+/* Discover grid (uses NAMED GRID AREAS) */
+.discover-grid{
+  display: grid;
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+
+  /* SMALL (320–640) */
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "a"
+    "b"
+    "c"
+    "d"
+    "e"
+    "f"
+    "g"
+    "h";
+}
+
+/* Cards */
+.discover-card{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+
+.discover-card h2{
+  margin: 0 0 .5rem;
+  line-height: 1.2;
+}
+
+.discover-card p{
+  margin: .5rem 0;
+  color: var(--muted);
+}
+
+.discover-card address{
+  font-style: normal;
+  color: var(--muted);
+  margin: .25rem 0 .5rem;
+}
+
+.discover-card figure{
+  margin: 0 0 .75rem;
+}
+
+.discover-card img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+/* Button */
+.discover-card button{
+  margin-top: .5rem;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: .6rem;
+  padding: .5rem .75rem;
+  cursor: pointer;
+  letter-spacing: .02em;
+}
+
+.discover-card button:hover{
+  background: rgba(255,255,255,.06);
+}
+
+.discover-card button:focus-visible{
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Named areas (attach to each card via class) */
+.area-a{ grid-area: a; }
+.area-b{ grid-area: b; }
+.area-c{ grid-area: c; }
+.area-d{ grid-area: d; }
+.area-e{ grid-area: e; }
+.area-f{ grid-area: f; }
+.area-g{ grid-area: g; }
+.area-h{ grid-area: h; }
+
+/* MEDIUM (641–1024): different grid-area layout */
+@media (min-width: 641px){
+  .discover-grid{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "a a b"
+      "c d b"
+      "e d f"
+      "g h f";
+  }
+
+  /* Hover effect ONLY non-mobile */
+  .discover-card img{
+    transition: transform 200ms ease, filter 200ms ease, box-shadow 200ms ease;
+  }
+
+  .discover-card img:hover{
+    transform: scale(1.03);
+    filter: contrast(1.05) saturate(1.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,.25);
+  }
+}
+
+/* LARGE (1025+): different layout again */
+@media (min-width: 1025px){
+  .discover-grid{
+    grid-template-columns: 1.2fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "a a b c"
+      "a a d d"
+      "e f d d"
+      "g h h h";
+  }
+}
