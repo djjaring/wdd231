@@ -13,7 +13,9 @@
 /* =========================
    Base Styles
 ========================= */
-*{ box-sizing:border-box; }
+*{
+  box-sizing:border-box;
+}
 
 body{
   margin:0;
@@ -64,7 +66,7 @@ h1, h2, h3{
 }
 
 /* =========================
-   Tags & Grid
+   Tag
 ========================= */
 .tag{
   display:inline-block;
@@ -76,6 +78,9 @@ h1, h2, h3{
   color:var(--slate);
 }
 
+/* =========================
+   Grid & Swatches
+========================= */
 .grid{
   display:grid;
   gap:1rem;
@@ -91,9 +96,6 @@ h1, h2, h3{
   }
 }
 
-/* =========================
-   Color Swatches
-========================= */
 .swatch{
   border:1px solid rgba(0,0,0,.15);
   border-radius:12px;
@@ -115,14 +117,25 @@ h1, h2, h3{
 }
 
 /* =========================
-   Code Blocks
+   Wireframe Image
 ========================= */
-pre{
-  background:#0b1220;
-  color:#e5e7eb;
-  padding:1rem;
-  border-radius:12px;
-  overflow:auto;
+.wireframe-figure{
+  margin:1.5rem 0;
+  text-align:center;
+}
+
+.wireframe-figure img{
+  max-width:100%;
+  height:auto;
+  border-radius:14px;
+  border:1px solid rgba(51,65,85,.25);
+  box-shadow:0 10px 30px rgba(15,23,42,.15);
+}
+
+.wireframe-figure figcaption{
+  margin-top:.75rem;
+  font-size:.9rem;
+  color:var(--slate);
 }
 
 /* =========================
