@@ -1,0 +1,136 @@
+/* =========================
+   Color Variables
+========================= */
+:root{
+  --ink:#0F172A;
+  --paper:#F8FAFC;
+  --crimson:#B91C1C;
+  --gold:#F59E0B;
+  --slate:#334155;
+  --panel:#FFFFFF;
+}
+
+/* =========================
+   Base Styles
+========================= */
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Montserrat", system-ui, sans-serif;
+  line-height:1.6;
+}
+
+/* =========================
+   Header
+========================= */
+header{
+  background:linear-gradient(135deg, var(--ink), var(--slate));
+  color:var(--paper);
+  padding:2rem 1rem;
+  border-bottom:6px solid var(--crimson);
+}
+
+header p{
+  max-width:70ch;
+  color:rgba(248,250,252,.9);
+}
+
+/* =========================
+   Layout
+========================= */
+.wrap{
+  max-width:980px;
+  margin:0 auto;
+  padding:1.25rem 1rem 3rem;
+}
+
+section{
+  background:var(--panel);
+  margin:1rem 0;
+  padding:1.25rem;
+  border-radius:14px;
+  box-shadow:0 6px 20px rgba(0,0,0,.06);
+}
+
+/* =========================
+   Typography
+========================= */
+h1, h2, h3{
+  font-family:"Oswald", sans-serif;
+  margin-bottom:.5rem;
+}
+
+/* =========================
+   Tags & Grid
+========================= */
+.tag{
+  display:inline-block;
+  padding:.2rem .6rem;
+  border-radius:999px;
+  font-size:.85rem;
+  font-weight:600;
+  background:rgba(245,158,11,.15);
+  color:var(--slate);
+}
+
+.grid{
+  display:grid;
+  gap:1rem;
+}
+
+.grid.two{
+  grid-template-columns:1fr;
+}
+
+@media (min-width: 780px){
+  .grid.two{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+/* =========================
+   Color Swatches
+========================= */
+.swatch{
+  border:1px solid rgba(0,0,0,.15);
+  border-radius:12px;
+  overflow:hidden;
+}
+
+.color{
+  height:50px;
+}
+
+.color.crimson{ background:var(--crimson); }
+.color.gold{ background:var(--gold); }
+.color.ink{ background:var(--ink); }
+.color.paper{ background:var(--paper); }
+
+.meta{
+  padding:.75rem;
+  color:var(--slate);
+}
+
+/* =========================
+   Code Blocks
+========================= */
+pre{
+  background:#0b1220;
+  color:#e5e7eb;
+  padding:1rem;
+  border-radius:12px;
+  overflow:auto;
+}
+
+/* =========================
+   Footer
+========================= */
+footer{
+  margin-top:1.5rem;
+  text-align:center;
+  color:var(--slate);
+  font-size:.95rem;
+}
