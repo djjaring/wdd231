@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pickleball Samurai | Socks & Apparel</title>
+  <meta name="description" content="Pickleball Samurai sells high-grip socks and performance apparel for players who want comfort, control, and style." />
+  <meta name="author" content="Dan Jay Jaring" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pickleball Samurai | Socks & Apparel" />
+  <meta property="og:description" content="High-grip socks and performance apparel built for pickleball." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://djjaring.github.io/wdd231/final/" />
+  <meta property="og:image" content="https://djjaring.github.io/wdd231/final/images/hero-samurai.webp" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+
+  <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>
+          <span class="brand-title">Pickleball Samurai</span>
+          <span class="brand-sub">Socks • Apparel • Drops</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Menu">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"/>
+          </svg>
+        </button>
+
+        <ul class="nav-links" id="navLinks" data-open="false">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section">
+      <div class="container hero-inner panel">
+        <div>
+          <h1>Grip the court. Move like a Samurai.</h1>
+          <p>High-performance pickleball socks and apparel designed for comfort, control, and long match days.</p>
+          <div class="hero-cta">
+            <a class="btn primary" href="shop.html">Shop Now</a>
+            <a class="btn" href="#drop">New Drop</a>
+          </div>
+          <p id="cartLive" class="help" aria-live="polite"></p>
+        </div>
+
+        <div class="hero-media">
+          <img src="images/hero-samurai.webp" alt="Samurai-themed pickleball banner image" loading="lazy" width="1200" height="800">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Featured Products</h2>
+          <p>Top picks from socks and apparel</p>
+        </div>
+
+        <!-- Simple featured cards for home (Shop page does the full 15+ list) -->
+        <div class="grid products">
+          <article class="product card">
+            <div class="thumb"><img src="images/products/sock-01.webp" alt="Featured sock product" loading="lazy" width="640" height="480"></div>
+            <h3>Samurai Grip Socks</h3>
+            <p class="meta">Pro • Socks</p>
+            <p class="price">$18.99</p>
+            <a class="btn" href="shop.html">View in Shop</a>
+          </article>
+
+          <article class="product card">
+            <div class="thumb"><img src="images/products/hoodie-01.webp" alt="Featured hoodie product" loading="lazy" width="640" height="480"></div>
+            <h3>Samurai Court Hoodie</h3>
+            <p class="meta">Pro • Hoodie</p>
+            <p class="price">$54.99</p>
+            <a class="btn" href="shop.html">View in Shop</a>
+          </article>
+
+          <article class="product card">
+            <div class="thumb"><img src="images/products/jacket-01.webp" alt="Featured jacket product" loading="lazy" width="640" height="480"></div>
+            <h3>Samurai Wind Jacket</h3>
+            <p class="meta">Limited • Jacket</p>
+            <p class="price">$69.99</p>
+            <a class="btn" href="shop.html">View in Shop</a>
+          </article>
+
+          <article class="product card">
+            <div class="thumb"><img src="images/products/cap-01.webp" alt="Featured cap product" loading="lazy" width="640" height="480"></div>
+            <h3>Samurai Crest Cap</h3>
+            <p class="meta">Pro • Accessories</p>
+            <p class="price">$22.99</p>
+            <a class="btn" href="shop.html">View in Shop</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="drop">
+      <div class="container panel banner">
+        <div>
+          <span class="badge">New Drop Collection</span>
+          <p class="help">Limited colors • Pro + Team sets</p>
+        </div>
+        <div class="countdown" id="dropCountdown" aria-live="polite">Drop timer loads…</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid two-cols">
+        <article class="card" style="padding:1rem">
+          <h2>Our Story & Materials</h2>
+          <p class="help">Built for players who grind weekly — breathable knits, reinforced zones, and clean designs.</p>
+          <p>Pickleball Samurai is inspired by disciplined footwork, smart positioning, and staying calm under pressure — like a samurai on the court.</p>
+        </article>
+
+        <article class="card" style="padding:1rem">
+          <h2>Size Guide & Care Tips</h2>
+          <ul>
+            <li>Wash cold, tumble low (or hang dry for longer life).</li>
+            <li>Use your normal shoe size for socks.</li>
+            <li>For hoodies/jackets: athletic fit — size up for relaxed.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container panel" style="padding:1rem">
+        <h2>Join Our Newsletter</h2>
+        <p class="help">Get drop alerts, bundle deals, and new designs.</p>
+
+        <form class="form" method="get" action="form-action.html">
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required autocomplete="email" />
+            <p class="help">We only send drop alerts (no spam).</p>
+          </div>
+
+          <div>
+            <label for="interest">Interested In</label>
+            <select id="interest" name="interest" required>
+              <option value="" selected disabled>Select one</option>
+              <option value="socks">Socks</option>
+              <option value="apparel">Apparel</option>
+              <option value="drops">New Drops</option>
+            </select>
+          </div>
+
+          <button class="btn primary" type="submit">Sign Up</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <ul class="footer-links">
+        <li><a href="attributions.html">Attributions</a></li>
+        <li><a href="#" aria-label="Video demo link (add your public YouTube/Loom link here)">Video Demo</a></li>
+      </ul>
+      <p class="help">© <span id="year"></span> Pickleball Samurai • Built by Dan Jay Jaring</p>
+    </div>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // simple drop countdown (JS requirement demo-friendly)
+      const target = new Date();
+      target.setDate(target.getDate() + 7);
+      const el = document.getElementById('dropCountdown');
+
+      function tick(){
+        const diff = target - new Date();
+        const d = Math.max(0, Math.floor(diff / (1000*60*60*24)));
+        const h = Math.max(0, Math.floor((diff / (1000*60*60)) % 24));
+        const m = Math.max(0, Math.floor((diff / (1000*60)) % 60));
+        el.textContent = diff <= 0 ? "Drop is live!" : `Drop in ${d}d ${h}h ${m}m`;
+      }
+      tick();
+      setInterval(tick, 60000);
+    </script>
+  </footer>
+</body>
+</html>

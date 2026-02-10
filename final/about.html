@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pickleball Samurai | About</title>
+  <meta name="description" content="Learn why Pickleball Samurai exists, what materials we use, and how our drops work." />
+  <meta name="author" content="Dan Jay Jaring" />
+
+  <meta property="og:title" content="Pickleball Samurai | About" />
+  <meta property="og:description" content="Our story, materials, and drop culture." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+
+  <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>
+          <span class="brand-title">Pickleball Samurai</span>
+          <span class="brand-sub">Socks • Apparel • Drops</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Menu">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"/>
+          </svg>
+        </button>
+
+        <ul class="nav-links" id="navLinks" data-open="false">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <div class="panel" style="padding:1rem">
+        <h1>About Pickleball Samurai</h1>
+        <p class="help">A brand concept site for WDD 231 — built with semantic HTML, responsive design, and dynamic JavaScript features.</p>
+
+        <div class="grid two-cols">
+          <section class="card" style="padding:1rem">
+            <h2>Why Samurai?</h2>
+            <p>Pickleball rewards patience, precision, and footwork. Our designs focus on comfort and control so you can stay steady at the kitchen line.</p>
+            <ul>
+              <li>Breathable materials</li>
+              <li>Reinforced high-wear zones</li>
+              <li>Limited drop culture for fresh designs</li>
+            </ul>
+          </section>
+
+          <section class="card" style="padding:1rem">
+            <h2>How Drops Work</h2>
+            <p>Limited drops create excitement and keep the collection fresh. Newsletter members get alerts first.</p>
+            <p class="help">Tip: In your video demo, show your fetch, modal, and localStorage working on the Shop page.</p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <ul class="footer-links">
+        <li><a href="attributions.html">Attributions</a></li>
+        <li><a href="#" aria-label="Video demo link (add your public YouTube/Loom link here)">Video Demo</a></li>
+      </ul>
+      <p class="help">© <span id="year"></span> Pickleball Samurai • Built by Dan Jay Jaring</p>
+    </div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </footer>
+</body>
+</html>

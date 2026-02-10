@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pickleball Samurai | Form Submission</title>
+  <meta name="description" content="Form submission results for Pickleball Samurai newsletter signup." />
+  <meta name="author" content="Dan Jay Jaring" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles/base.css" />
+</head>
+<body class="section">
+  <main class="container">
+    <div class="panel" style="padding:1rem">
+      <h1>Thanks for signing up!</h1>
+      <p class="help">Here’s what we received:</p>
+      <div id="results" class="card" style="padding:1rem"></div>
+      <p style="margin-top:1rem"><a class="btn" href="index.html">Back to Home</a></p>
+    </div>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const entries = [...params.entries()].map(([k,v]) => `<p><strong>${k}:</strong> ${v}</p>`).join("");
+    document.getElementById("results").innerHTML = entries || "<p>No data found.</p>";
+  </script>
+</body>
+</html>

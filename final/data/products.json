@@ -1,0 +1,22 @@
+{
+  "products": [
+    { "id": 1, "name": "Samurai Grip Socks - Shadow", "category": "socks", "level": "pro", "price": 18.99, "material": "Nylon/Spandex", "description": "Compression arch support, anti-blister weave, and aggressive court grip.", "image": "images/products/sock-01.webp", "alt": "Black and gray pickleball socks with samurai pattern" },
+    { "id": 2, "name": "Samurai Grip Socks - Ember", "category": "socks", "level": "pro", "price": 18.99, "material": "Nylon/Spandex", "description": "Breathable mesh zones and reinforced heel/toe for long sessions.", "image": "images/products/sock-02.webp", "alt": "Orange and charcoal pickleball socks with samurai pattern" },
+    { "id": 3, "name": "Samurai Team Socks - White", "category": "socks", "level": "team", "price": 16.99, "material": "Cotton blend", "description": "Clean team look with comfort cushioning and moisture control.", "image": "images/products/sock-03.webp", "alt": "White pickleball socks with samurai crest" },
+    { "id": 4, "name": "Samurai Ankle Socks - Stealth", "category": "socks", "level": "limited", "price": 14.99, "material": "Nylon blend", "description": "Low-cut stealth style with locked-in heel pocket.", "image": "images/products/sock-04.webp", "alt": "Low cut black pickleball socks" },
+
+    { "id": 5, "name": "Samurai Court Hoodie - Midnight", "category": "hoodies", "level": "pro", "price": 54.99, "material": "Fleece", "description": "Warm-up hoodie with athletic fit and soft brushed interior.", "image": "images/products/hoodie-01.webp", "alt": "Dark hoodie for pickleball with samurai logo" },
+    { "id": 6, "name": "Samurai Wind Jacket - Storm", "category": "jackets", "level": "limited", "price": 69.99, "material": "Ripstop", "description": "Lightweight wind protection with breathable panels.", "image": "images/products/jacket-01.webp", "alt": "Gray wind jacket with samurai branding" },
+    { "id": 7, "name": "Samurai Performance Tee - Black", "category": "tees", "level": "team", "price": 24.99, "material": "Poly blend", "description": "Sweat-wicking performance tee built for tournament days.", "image": "images/products/tee-01.webp", "alt": "Black performance shirt with samurai crest" },
+    { "id": 8, "name": "Samurai Cap - Crest", "category": "accessories", "level": "pro", "price": 22.99, "material": "Cotton", "description": "Classic cap with stitched crest and adjustable strap.", "image": "images/products/cap-01.webp", "alt": "Black cap with samurai crest" },
+
+    { "id": 9, "name": "Samurai Grip Socks - Ocean", "category": "socks", "level": "team", "price": 16.99, "material": "Nylon/Spandex", "description": "Cool tones, strong compression, and quick-dry weave.", "image": "images/products/sock-05.webp", "alt": "Blue pickleball socks with samurai pattern" },
+    { "id": 10, "name": "Samurai Crew Socks - Classic", "category": "socks", "level": "pro", "price": 17.99, "material": "Nylon blend", "description": "Cushioned crew socks with ribbed stability zone.", "image": "images/products/sock-06.webp", "alt": "Gray crew socks with samurai branding" },
+    { "id": 11, "name": "Samurai Quarter Socks - White/Black", "category": "socks", "level": "team", "price": 15.99, "material": "Cotton blend", "description": "Everyday quarter socks for practice and league night.", "image": "images/products/sock-07.webp", "alt": "Quarter socks in white and black" },
+    { "id": 12, "name": "Samurai Drop Hoodie - Sand", "category": "hoodies", "level": "limited", "price": 59.99, "material": "Fleece", "description": "Limited drop colorway with oversized crest print.", "image": "images/products/hoodie-02.webp", "alt": "Tan hoodie with samurai logo" },
+
+    { "id": 13, "name": "Samurai Track Jacket - Onyx", "category": "jackets", "level": "pro", "price": 74.99, "material": "Poly", "description": "Stretch track jacket made for warmups and travel.", "image": "images/products/jacket-02.webp", "alt": "Black track jacket with samurai branding" },
+    { "id": 14, "name": "Samurai Wristbands - Twin Pack", "category": "accessories", "level": "team", "price": 9.99, "material": "Terry cloth", "description": "Absorb sweat fast. Keep your grip locked.", "image": "images/products/wrist-01.webp", "alt": "Pair of wristbands with samurai symbol" },
+    { "id": 15, "name": "Samurai Socks Bundle - 3 Pack", "category": "socks", "level": "limited", "price": 44.99, "material": "Mixed", "description": "3-pack bundle — best value for weekly play.", "image": "images/products/bundle-01.webp", "alt": "Three-pack bundle of pickleball socks" }
+  ]
+}
