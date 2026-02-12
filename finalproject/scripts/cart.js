@@ -1,11 +1,24 @@
-import { initNavAndYear } from "./ui.js";
-
-initNavAndYear();
+// scripts/cart.js (NO imports)
 
 const CART_KEY = "ps_cart";
 
 function money(n){
   return new Intl.NumberFormat("en-US", { style:"currency", currency:"USD" }).format(n);
+}
+
+function initNav() {
+  const yearEl = document.querySelector("#year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  const toggleBtn = document.querySelector(".nav-toggle");
+  const nav = document.querySelector("#primary-nav");
+
+  if (toggleBtn && nav) {
+    toggleBtn.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("is-open");
+      toggleBtn.setAttribute("aria-expanded", String(isOpen));
+    });
+  }
 }
 
 function getCart(){
@@ -76,5 +89,6 @@ document.querySelector("#clearCartBtn")?.addEventListener("click", () => {
   setCart([]);
 });
 
+initNav();
 updateCartCount();
 render();

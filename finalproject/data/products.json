@@ -1,21 +1,27 @@
 {
   "products": [
-    { "id": 1, "name": "Samurai Grip Socks - Shadow", "category": "socks", "level": "pro", "price": 18.99, "material": "Nylon/Spandex", "description": "Compression arch support and aggressive court grip.", "image": "images/products/sock-01.webp", "alt": "Black and gray pickleball socks with samurai pattern", "featured": true },
-    { "id": 2, "name": "Samurai Grip Socks - Ember", "category": "socks", "level": "pro", "price": 18.99, "material": "Nylon/Spandex", "description": "Breathable mesh zones and reinforced heel/toe.", "image": "images/products/sock-02.webp", "alt": "Orange and charcoal pickleball socks", "featured": true },
-    { "id": 3, "name": "Samurai Team Socks - White", "category": "socks", "level": "team", "price": 16.99, "material": "Cotton blend", "description": "Cushioned comfort with clean court style.", "image": "images/products/sock-03.webp", "alt": "White team socks with minimal samurai icon", "featured": true },
+    { "id": 1, "name": "Samurai Grip Socks - Shadow", "category": "socks", "level": "pro", "price": 18.99, "material": "Nylon/Spandex", "description": "Compression arch support and aggressive court grip.", "image": "images/sock-01.webp", "alt": "Black and gray pickleball socks with samurai pattern", "featured": true },
 
-    { "id": 4, "name": "Storm Court Hoodie", "category": "hoodies", "level": "pro", "price": 49.99, "material": "Fleece blend", "description": "Warm-up hoodie built for windy courts.", "image": "images/products/hoodie-01.webp", "alt": "Dark hoodie with samurai logo", "featured": true },
-    { "id": 5, "name": "Midnight Jacket", "category": "jackets", "level": "pro", "price": 74.99, "material": "Poly shell", "description": "Lightweight jacket with flexible shoulders.", "image": "images/products/jacket-01.webp", "alt": "Black athletic jacket", "featured": true },
+    { "id": 2, "name": "Samurai Grip Socks - Ember", "category": "socks", "level": "pro", "price": 18.99, "material": "Nylon/Spandex", "description": "Breathable mesh zones and reinforced heel/toe.", "image": "images/sock-02.webp", "alt": "Orange and charcoal pickleball socks", "featured": true },
 
-    { "id": 6, "name": "Grip Socks - Sand", "category": "socks", "level": "team", "price": 16.99, "material": "Cotton blend", "description": "Everyday comfort with reliable traction.", "image": "images/products/sock-04.webp", "alt": "Tan socks with grip pads", "featured": false },
-    { "id": 7, "name": "Grip Socks - Slate", "category": "socks", "level": "pro", "price": 18.99, "material": "Nylon/Spandex", "description": "Tight weave to reduce friction and hotspots.", "image": "images/products/sock-05.webp", "alt": "Gray socks with samurai pattern", "featured": false },
-    { "id": 8, "name": "Court Cap - Crimson", "category": "accessories", "level": "pro", "price": 24.99, "material": "Cotton twill", "description": "Light cap with moisture band.", "image": "images/products/cap-01.webp", "alt": "Red cap with embroidered logo", "featured": false },
-    { "id": 9, "name": "Wristbands - Duo", "category": "accessories", "level": "team", "price": 12.99, "material": "Terry cloth", "description": "Absorb sweat and keep your grip clean.", "image": "images/products/wrist-01.webp", "alt": "Two wristbands with logo", "featured": false },
-    { "id": 10, "name": "Court Tee - Ink", "category": "shirts", "level": "team", "price": 22.99, "material": "Cotton", "description": "Soft tee for casual wear and warm-ups.", "image": "images/products/tee-01.webp", "alt": "Black t-shirt with samurai graphic", "featured": false },
-    { "id": 11, "name": "Court Tee - Paper", "category": "shirts", "level": "team", "price": 22.99, "material": "Cotton", "description": "Bright clean look for tournaments.", "image": "images/products/tee-02.webp", "alt": "White t-shirt with samurai graphic", "featured": false },
-    { "id": 12, "name": "Warm-Up Pants", "category": "pants", "level": "pro", "price": 54.99, "material": "Poly knit", "description": "Stretch fit for quick movement.", "image": "images/products/pants-01.webp", "alt": "Black warm-up pants", "featured": false },
-    { "id": 13, "name": "Gear Bag - Court Ready", "category": "accessories", "level": "pro", "price": 59.99, "material": "Poly canvas", "description": "Holds shoes, paddles, and essentials.", "image": "images/products/bag-01.webp", "alt": "Gear bag with logo patch", "featured": false },
-    { "id": 14, "name": "Socks - Gold Accent", "category": "socks", "level": "pro", "price": 18.99, "material": "Nylon/Spandex", "description": "Gold accent pattern with high grip pads.", "image": "images/products/sock-06.webp", "alt": "Black socks with gold accents", "featured": false },
-    { "id": 15, "name": "Light Shell Jacket - Fog", "category": "jackets", "level": "team", "price": 69.99, "material": "Poly shell", "description": "Light shell for morning sessions.", "image": "images/products/jacket-02.webp", "alt": "Gray athletic jacket", "featured": false }
+    { "id": 3, "name": "Samurai Team Socks - White", "category": "socks", "level": "team", "price": 16.99, "material": "Cotton blend", "description": "Cushioned comfort with clean court style.", "image": "images/sock-03.webp", "alt": "White team socks with minimal samurai icon", "featured": true },
+
+    { "id": 4, "name": "Storm Court Hoodie", "category": "hoodies", "level": "pro", "price": 49.99, "material": "Fleece blend", "description": "Warm-up hoodie built for windy courts.", "image": "images/hoodie-01.webp", "alt": "Dark hoodie with samurai logo", "featured": true },
+
+    { "id": 5, "name": "Midnight Jacket", "category": "jackets", "level": "pro", "price": 74.99, "material": "Poly shell", "description": "Lightweight jacket with flexible shoulders.", "image": "images/jacket-01.webp", "alt": "Black athletic jacket", "featured": true },
+
+    { "id": 6, "name": "Grip Socks - Sand", "category": "socks", "level": "team", "price": 16.99, "material": "Cotton blend", "description": "Everyday comfort with reliable traction.", "image": "images/sock-04.webp", "alt": "Tan socks with grip pads", "featured": false },
+
+    { "id": 7, "name": "Grip Socks - Slate", "category": "socks", "level": "pro", "price": 18.99, "material": "Nylon/Spandex", "description": "Tight weave to reduce friction and hotspots.", "image": "images/sock-05.webp", "alt": "Gray socks with samurai pattern", "featured": false },
+
+    { "id": 8, "name": "Court Cap - Crimson", "category": "accessories", "level": "pro", "price": 24.99, "material": "Cotton twill", "description": "Light cap with moisture band.", "image": "images/cap-01.webp", "alt": "Red cap with embroidered logo", "featured": false },
+
+    { "id": 9, "name": "Wristbands - Duo", "category": "accessories", "level": "team", "price": 12.99, "material": "Terry cloth", "description": "Absorb sweat and keep your grip clean.", "image": "images/wrist-01.webp", "alt": "Two wristbands with logo", "featured": false },
+
+    { "id": 10, "name": "Court Tee - Ink", "category": "shirts", "level": "team", "price": 22.99, "material": "Cotton", "description": "Soft tee for casual wear and warm-ups.", "image": "images/tee-01.webp", "alt": "Black t-shirt with samurai graphic", "featured": false },
+
+    { "id": 11, "name": "Court Tee - Paper", "category": "shirts", "level": "team", "price": 22.99, "material": "Cotton", "description": "Bright clean look for tournaments.", "image": "images/tee-02.webp", "alt": "White t-shirt with samurai graphic", "featured": false },
+
+    { "id": 12, "name": "Warm-Up Pants", "category": "pants", "level": "pro", "price": 54.99, "material": "Poly knit", "description": "Stretch fit for quick movement.", "image": "images/pants-01.webp", "alt": "Black warm-up pants", "featured": false }
   ]
 }

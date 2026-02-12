@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pickleball Samurai | Cart</title>
 
-  <meta name="description" content="View your cart and proceed to checkout." />
+  <meta name="description" content="View your cart items saved in localStorage." />
   <meta name="author" content="Dan Jay Jaring" />
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
@@ -21,7 +21,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Pickleball Samurai home">
-        <img class="brand-logo" src="images/logo.svg" alt="Pickleball Samurai logo" width="160" height="40">
+        <span class="brand-mark" aria-hidden="true"></span>
         <span class="brand-text">Pickleball Samurai</span>
       </a>
 
@@ -30,12 +30,13 @@
       </button>
 
       <nav id="primary-nav" class="nav" aria-label="Primary">
-        <a class="nav-link" href="index.html">Home</a>
-        <a class="nav-link" href="shop.html">Shop</a>
-        <a class="nav-link" href="cart.html" aria-current="page">Cart (<span id="cartCount">0</span>)</a>
-        <a class="nav-link" href="about.html">About</a>
-        <a class="nav-link" href="contact.html">Contact</a>
-      </nav>
+  <a class="nav-link" href="index.html">Home</a>
+  <a class="nav-link" href="shop.html" aria-current="page">Shop</a>
+  <a class="nav-link" href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+  <a class="nav-link" href="about.html">About</a>
+  <a class="nav-link" href="contact.html">Contact</a>
+</nav>
+
     </div>
   </header>
 
@@ -44,7 +45,7 @@
       <div class="container">
         <div class="section-head">
           <h1>Your Cart</h1>
-          <p>Items are saved in localStorage. You can remove items or clear the cart.</p>
+          <p>Items added from Shop are saved in localStorage.</p>
         </div>
 
         <div id="cartStatus" class="status" role="status" aria-live="polite"></div>
@@ -54,6 +55,7 @@
 
           <div class="cart-total">
             <p><strong>Total:</strong> <span id="cartTotal">$0.00</span></p>
+
             <div class="cart-actions">
               <button id="clearCartBtn" class="btn outline" type="button">Clear Cart</button>
               <a class="btn" href="contact.html">Checkout</a>
