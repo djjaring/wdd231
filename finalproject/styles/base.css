@@ -530,3 +530,61 @@ img{ max-width: 100%; display: block; }
   border-radius: var(--radius);
   border: 1px solid var(--line);
 }
+/* ===============================
+   PREMIUM DARK SELECT STYLING
+=================================*/
+
+.control select,
+.select-wrap select{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background: #0f141c;
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: .6rem 2.5rem .6rem .85rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  /* Custom arrow */
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--accent) 50%),
+    linear-gradient(135deg, var(--accent) 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) calc(50% - 3px),
+    calc(100% - 12px) calc(50% - 3px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+
+  transition: all .2s ease;
+}
+
+/* Hover */
+.control select:hover,
+.select-wrap select:hover{
+  border-color: var(--accent);
+}
+
+/* Focus glow */
+.control select:focus,
+.select-wrap select:focus{
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(225,29,72,.25);
+}
+
+/* Dropdown options */
+.control select option,
+.select-wrap select option{
+  background: #0f141c;
+  color: var(--text);
+}
+
+/* Selected option highlight */
+.control select option:checked,
+.select-wrap select option:checked{
+  background: var(--accent);
+  color: #fff;
+}
