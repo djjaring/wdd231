@@ -588,3 +588,9 @@ img{ max-width: 100%; display: block; }
   background: var(--accent);
   color: #fff;
 }
+.brand-logo{
+  width: 34px;
+  height: 34px;
+  object-fit: cover;
+  border-radius: 8px;
+}
