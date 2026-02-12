@@ -110,18 +110,22 @@ function renderProducts(list) {
 
   if (status) status.textContent = `Showing ${list.length} product(s).`;
 
-  wrap.innerHTML = list.map((p) => `
-    <article class="card">
-      <button type="button" class="card-open" data-id="${p.id}">
-        <img src="${p.image}" alt="${p.alt || p.name}" loading="lazy" width="600" height="400">
-        <div class="card-body">
-          <h3 class="card-title">${p.name}</h3>
-          <p class="card-meta">${p.level.toUpperCase()} • ${p.material}</p>
-          <p class="price">${money(p.price)}</p>
-        </div>
-      </button>
-    </article>
-  `).join("");
+  wrap.innerHTML = list
+    .map(
+      (p) => `
+      <article class="card">
+        <button type="button" class="card-open" data-id="${p.id}">
+          <img src="${p.image}" alt="${p.alt || p.name}" loading="lazy" width="600" height="400">
+          <div class="card-body">
+            <h3 class="card-title">${p.name}</h3>
+            <p class="card-meta">${p.level.toUpperCase()} • ${p.material}</p>
+            <p class="price">${money(p.price)}</p>
+          </div>
+        </button>
+      </article>
+    `
+    )
+    .join("");
 
   wrap.querySelectorAll(".card-open").forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -209,7 +213,6 @@ async function initShop() {
 
       updateList();
     });
-
   } catch (err) {
     console.error(err);
     if (status) status.textContent = "Products failed to load. Check console + JSON path.";
