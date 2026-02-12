@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pickleball Samurai | Form Submitted</title>
+
+  <meta name="description" content="Form submission confirmation for Pickleball Samurai." />
+  <meta name="author" content="Dan Jay Jaring" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+
+  <script type="module" src="scripts/form-action.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">Pickleball Samurai</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Menu</span> ☰
+      </button>
+
+      <nav id="primary-nav" class="nav" aria-label="Primary">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="shop.html">Shop</a>
+        <a class="nav-link" href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h1>Message Sent</h1>
+          <p class="muted">Here’s the information you submitted:</p>
+        </div>
+
+        <div class="panel">
+          <div id="result"></div>
+          <div class="form-actions" style="margin-top:1rem;">
+            <a class="btn" href="shop.html">Back to Shop</a>
+            <a class="btn outline" href="contact.html">Send Another</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Pickleball Samurai</p>
+      <nav class="footer-nav">
+        <a href="attributions.html">Attributions</a>
+        <a href="#">Video Demo</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pickleball Samurai | About</title>
+
+  <meta name="description" content="Learn about the mission, story, and materials behind Pickleball Samurai apparel." />
+  <meta name="author" content="Dan Jay Jaring" />
+
+  <meta property="og:title" content="Pickleball Samurai | About" />
+  <meta property="og:description" content="Discover the story and discipline behind our samurai-inspired pickleball gear." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+
+  <script type="module" src="scripts/about.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">Pickleball Samurai</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Menu</span> ☰
+      </button>
+
+      <nav id="primary-nav" class="nav" aria-label="Primary">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="shop.html">Shop</a>
+        <a class="nav-link" href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+        <a class="nav-link" href="about.html" aria-current="page">About</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="section">
+      <div class="container about-hero">
+        <div>
+          <h1>Our Story</h1>
+          <p class="muted">
+            Pickleball Samurai was built on discipline, precision, and performance.
+            We believe footwork is the foundation of confidence on the court.
+          </p>
+        </div>
+
+        <img 
+          src="images/hoodie-01.webp"
+          alt="Pickleball Samurai hoodie lifestyle image"
+          width="800"
+          height="600"
+          loading="lazy"
+          class="about-image"
+        >
+      </div>
+    </section>
+
+    <!-- MISSION -->
+    <section class="section band">
+      <div class="container">
+        <h2>Our Mission</h2>
+        <p>
+          To create performance-driven apparel that supports explosive movement,
+          long rallies, and tournament-level focus.
+        </p>
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="section">
+      <div class="container three-col">
+
+        <article class="panel">
+          <h3>Discipline</h3>
+          <p>Inspired by samurai tradition — control before aggression.</p>
+        </article>
+
+        <article class="panel">
+          <h3>Performance</h3>
+          <p>Breathable materials, reinforced zones, anti-blister design.</p>
+        </article>
+
+        <article class="panel">
+          <h3>Community</h3>
+          <p>Built for rec players, grinders, and tournament competitors.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- DYNAMIC STATS -->
+    <section class="section">
+      <div class="container stats">
+        <div class="stat">
+          <h2 id="statProducts">0</h2>
+          <p>Products Available</p>
+        </div>
+
+        <div class="stat">
+          <h2 id="statCategories">0</h2>
+          <p>Product Categories</p>
+        </div>
+
+        <div class="stat">
+          <h2>100%</h2>
+          <p>Samurai Focus</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Pickleball Samurai</p>
+      <nav class="footer-nav">
+        <a href="attributions.html">Attributions</a>
+        <a href="#">Video Demo</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

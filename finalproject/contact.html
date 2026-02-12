@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pickleball Samurai | Contact</title>
+
+  <meta name="description" content="Contact Pickleball Samurai for product questions, support, and drop alerts." />
+  <meta name="author" content="Dan Jay Jaring" />
+
+  <meta property="og:title" content="Pickleball Samurai | Contact" />
+  <meta property="og:description" content="Send a message to Pickleball Samurai support and get a fast response." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+
+  <script type="module" src="scripts/contact.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">Pickleball Samurai</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Menu</span> ☰
+      </button>
+
+      <nav id="primary-nav" class="nav" aria-label="Primary">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="shop.html">Shop</a>
+        <a class="nav-link" href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h1>Contact</h1>
+          <p class="muted">Questions about sizing, drops, or orders? Send us a message.</p>
+        </div>
+
+        <div class="two-col">
+          <article class="panel">
+            <h2>Support</h2>
+            <ul class="contact-list">
+              <li><strong>Email:</strong> support@pickleball-samurai.com</li>
+              <li><strong>Hours:</strong> Mon–Fri, 9am–5pm</li>
+              <li><strong>Location:</strong> Jacksonville, Florida</li>
+            </ul>
+            <p class="muted">Tip: Add items to your cart first, then checkout after messaging.</p>
+            <a class="btn outline" href="shop.html">Go to Shop</a>
+          </article>
+
+          <article class="panel">
+            <h2>Send a Message</h2>
+
+            <form id="contactForm" class="form" method="get" action="form-action.html" novalidate>
+              <label for="fullName">Full Name<span aria-hidden="true"> *</span></label>
+              <input id="fullName" name="fullName" type="text" autocomplete="name" required />
+
+              <label for="email">Email<span aria-hidden="true"> *</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+
+              <label for="topic">Topic<span aria-hidden="true"> *</span></label>
+              <select id="topic" name="topic" required>
+                <option value="">Choose one…</option>
+                <option value="sizing">Sizing</option>
+                <option value="order">Order / Shipping</option>
+                <option value="drops">New Drops</option>
+                <option value="wholesale">Wholesale</option>
+                <option value="other">Other</option>
+              </select>
+
+              <label for="message">Message<span aria-hidden="true"> *</span></label>
+              <textarea id="message" name="message" rows="5" required placeholder="Write your message here..."></textarea>
+
+              <label class="checkbox">
+                <input id="newsletter" name="newsletter" type="checkbox" value="yes" />
+                <span>Send me drop alerts (newsletter)</span>
+              </label>
+
+              <input type="hidden" id="submittedAt" name="submittedAt" value="" />
+
+              <div class="form-actions">
+                <button class="btn" type="submit">Send Message</button>
+                <button class="btn outline" type="reset">Reset</button>
+              </div>
+
+              <p id="formStatus" class="status" role="status" aria-live="polite"></p>
+            </form>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Pickleball Samurai</p>
+      <nav class="footer-nav">
+        <a href="attributions.html">Attributions</a>
+        <a href="#">Video Demo</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,6 +1,7 @@
 // scripts/main.js (NO imports)
 
 const DATA_URL = "data/products.json";
+const CART_KEY = "ps_cart";
 
 function money(n) {
   return new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(n);
@@ -19,6 +20,22 @@ function initNav() {
       toggleBtn.setAttribute("aria-expanded", String(isOpen));
     });
   }
+}
+
+function updateCartCounts() {
+  let count = 0;
+
+  try {
+    const raw = localStorage.getItem(CART_KEY);
+    const cart = raw ? JSON.parse(raw) : [];
+    count = Array.isArray(cart) ? cart.length : 0;
+  } catch {
+    count = 0;
+  }
+
+  document.querySelectorAll("[data-cart-count]").forEach((el) => {
+    el.textContent = String(count);
+  });
 }
 
 function initViewPref() {
@@ -72,18 +89,22 @@ function renderFeatured(items) {
   const wrap = document.querySelector("#featuredProducts");
   if (!wrap) return;
 
-  wrap.innerHTML = items.map((p) => `
-    <article class="card">
-      <button type="button" data-id="${p.id}">
-        <img src="${p.image}" alt="${p.alt || p.name}" loading="lazy" width="600" height="400">
-        <div class="card-body">
-          <h3 class="card-title">${p.name}</h3>
-          <p class="card-meta">${p.level.toUpperCase()} • ${p.material}</p>
-          <p class="price">${money(p.price)}</p>
-        </div>
-      </button>
-    </article>
-  `).join("");
+  wrap.innerHTML = items
+    .map(
+      (p) => `
+      <article class="card">
+        <button type="button" data-id="${p.id}">
+          <img src="${p.image}" alt="${p.alt || p.name}" loading="lazy" width="600" height="400">
+          <div class="card-body">
+            <h3 class="card-title">${p.name}</h3>
+            <p class="card-meta">${p.level.toUpperCase()} • ${p.material}</p>
+            <p class="price">${money(p.price)}</p>
+          </div>
+        </button>
+      </article>
+    `
+    )
+    .join("");
 
   wrap.querySelectorAll("button[data-id]").forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -107,7 +128,6 @@ async function initFeaturedProducts() {
     const all = Array.isArray(data.products) ? data.products : [];
 
     const featured = all.filter((p) => p.featured === true);
-
     renderFeatured(featured);
 
     if (status) status.textContent = `Loaded ${featured.length} featured items. Click a product for details.`;
@@ -117,6 +137,8 @@ async function initFeaturedProducts() {
   }
 }
 
+// INIT (run on page load)
 initNav();
 initViewPref();
 initFeaturedProducts();
+updateCartCounts();
