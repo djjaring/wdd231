@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pickleball Samurai | Home</title>
+
+  <meta name="description" content="Pickleball Samurai socks and apparel: premium grip socks, jackets, and drops built for the court." />
+  <meta name="author" content="Dan Jay Jaring" />
+
+  <meta property="og:title" content="Pickleball Samurai | Home" />
+  <meta property="og:description" content="Explore featured drops, court-ready socks, and samurai-inspired apparel." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+
+  <script type="module" src="scripts/main.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Pickleball Samurai home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">Pickleball Samurai</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Menu</span>
+        ☰
+      </button>
+
+      <nav id="primary-nav" class="nav" aria-label="Primary">
+        <a class="nav-link" href="index.html" aria-current="page">Home</a>
+        <a class="nav-link" href="shop.html">Shop</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Grip. Comfort. Samurai Focus.</h1>
+          <p>Premium pickleball socks and apparel designed for quick cuts, long rallies, and confident footwork.</p>
+
+          <div class="hero-actions">
+            <a class="btn" href="shop.html">Shop Now</a>
+
+            <label class="select-wrap">
+              <span class="sr-only">Preferred view</span>
+              <select id="viewPref" name="viewPref" aria-label="Featured products view preference">
+                <option value="grid">Grid view</option>
+                <option value="list">List view</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <!-- Replace with an optimized hero.webp if you have one -->
+          <div class="hero-placeholder">Hero Image / Samurai Art</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PRODUCTS (DYNAMIC) -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Featured Products</h2>
+          <p>Click any item to view details in an accessible modal.</p>
+        </div>
+
+        <div id="productStatus" class="status" role="status" aria-live="polite"></div>
+        <div id="featuredProducts" class="product-grid" data-view="grid"></div>
+      </div>
+    </section>
+
+    <!-- NEW DROP -->
+    <section class="section band">
+      <div class="container band-inner">
+        <h2 class="band-title">New Drop Collection</h2>
+        <p class="band-sub">Limited • Pro • Team Sets</p>
+        <div class="band-bar" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- INFO PANELS -->
+    <section class="section">
+      <div class="container two-col">
+        <article class="panel">
+          <h3>Our Story &amp; Materials</h3>
+          <p>
+            We design gear for fast feet and controlled aggression — breathable meshes, reinforced zones,
+            and patterns inspired by samurai discipline.
+          </p>
+          <a class="link" href="about.html">Read our story</a>
+        </article>
+
+        <article class="panel">
+          <h3>Size Guide &amp; Care Tips</h3>
+          <p>
+            Keep your grip socks performing: wash cold, air dry when possible, and store away from heat.
+          </p>
+          <a class="link" href="shop.html">View sizing</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- REVIEWS + NEWSLETTER -->
+    <section class="section">
+      <div class="container two-col">
+        <article class="panel">
+          <h3>Customer Reviews</h3>
+          <ul class="reviews">
+            <li><strong>“Best grip I’ve tried.”</strong> — Court player</li>
+            <li><strong>“No blisters after 3 hours.”</strong> — Weekend grinder</li>
+            <li><strong>“Looks clean and performs.”</strong> — Doubles specialist</li>
+          </ul>
+        </article>
+
+        <article class="panel">
+          <h3>Join Our Newsletter</h3>
+          <p>Get drop alerts and early access.</p>
+
+          <form class="newsletter" method="get" action="form-action.html">
+            <label for="email">Email</label>
+            <div class="newsletter-row">
+              <input id="email" name="email" type="email" required autocomplete="email" />
+              <button class="btn" type="submit">Sign Up</button>
+            </div>
+          </form>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAL -->
+  <dialog id="productModal" class="modal" aria-labelledby="modalTitle">
+    <div class="modal-inner">
+      <form method="dialog">
+        <button class="icon-btn" aria-label="Close dialog">✕</button>
+      </form>
+
+      <h2 id="modalTitle">Product</h2>
+      <p id="modalMeta" class="muted"></p>
+      <img id="modalImg" class="modal-img" alt="" loading="lazy" />
+      <p id="modalDesc"></p>
+      <p id="modalPrice" class="price"></p>
+
+      <div class="modal-actions">
+        <a class="btn" href="shop.html">Go to Shop</a>
+        <form method="dialog"><button class="btn outline" type="submit">Close</button></form>
+      </div>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Pickleball Samurai</p>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="contact.html">Contact</a>
+        <a href="attributions.html">Attributions</a>
+        <a href="#" aria-label="Video demo link (add your YouTube/Loom later)">Video Demo</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

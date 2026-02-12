@@ -54,7 +54,10 @@
     <div class="container">
       <div class="panel" style="padding:1rem">
         <h1>Shop</h1>
-        <p class="help">Filter categories. Click “View details” to open the modal. “Add to cart” saves to localStorage.</p>
+        <p class="help">
+          Filter categories. Click “View details” to open the modal.
+          “Add to cart” saves to localStorage.
+        </p>
 
         <div class="grid" style="grid-template-columns: 1fr; gap:1rem; margin:1rem 0;">
           <div>
@@ -67,19 +70,23 @@
               <option value="tees">Tees</option>
               <option value="accessories">Accessories</option>
             </select>
+            <p class="help" id="resultsLive" aria-live="polite"></p>
           </div>
+
           <p id="cartLive" class="help" aria-live="polite"></p>
         </div>
 
         <div class="grid products" id="productList" aria-live="polite"></div>
+
+        <p class="help" id="shopError" role="status" aria-live="polite" style="margin-top:1rem"></p>
       </div>
     </div>
 
-    <dialog id="productModal" aria-label="Product details">
+    <dialog id="productModal" aria-labelledby="modalTitle">
       <div class="modal-inner">
         <div class="modal-head">
           <div>
-            <h2 data-modal-title>Product</h2>
+            <h2 id="modalTitle" data-modal-title>Product</h2>
             <p class="help">Details</p>
           </div>
           <button class="icon-btn" id="modalClose" type="button" aria-label="Close dialog">✕</button>

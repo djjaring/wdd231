@@ -13,7 +13,7 @@ export async function fetchProducts(url) {
   }
 }
 
-export function renderProducts(listEl, products, dialogEl) {
+export function renderProducts(listEl, products) {
   if (!listEl) return;
 
   listEl.innerHTML = products.map(p => `
@@ -26,17 +26,28 @@ export function renderProducts(listEl, products, dialogEl) {
         <span class="meta">${p.category} • ${p.level}</span>
         <span class="price">$${Number(p.price).toFixed(2)}</span>
       </div>
-      <button type="button" data-id="${p.id}">View details</button>
+      <button type="button" data-view="${p.id}">View details</button>
       <button type="button" data-add="${p.id}">Add to cart</button>
     </article>
   `).join('');
+}
+
+export function filterByCategory(products, category) {
+  if (category === 'all') return products;
+  return products.filter(p => p.category === category);
+}
+
+// Event delegation (works even after re-render)
+export function attachProductClicks(listEl, productsGetter, dialogEl) {
+  if (!listEl) return;
 
   listEl.addEventListener('click', (e) => {
-    const viewBtn = e.target.closest('[data-id]');
+    const viewBtn = e.target.closest('[data-view]');
     const addBtn = e.target.closest('[data-add]');
+    const products = productsGetter();
 
     if (viewBtn) {
-      const id = Number(viewBtn.dataset.id);
+      const id = Number(viewBtn.dataset.view);
       const product = products.find(x => x.id === id);
       if (product) openProductModal(dialogEl, product);
     }
@@ -45,14 +56,10 @@ export function renderProducts(listEl, products, dialogEl) {
       const id = Number(addBtn.dataset.add);
       const product = products.find(x => x.id === id);
       if (!product) return;
+
       const count = addToCart(product);
       const live = document.querySelector('#cartLive');
       if (live) live.textContent = `Added to cart. Cart now has ${count} items.`;
     }
-  }, { once: true });
-}
-
-export function filterByCategory(products, category) {
-  if (category === 'all') return products;
-  return products.filter(p => p.category === category);
+  });
 }
