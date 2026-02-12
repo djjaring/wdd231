@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pickleball Samurai | Shop</title>
+
+  <meta name="description" content="Shop Pickleball Samurai products: grip socks, hoodies, jackets, and accessories." />
+  <meta name="author" content="Dan Jay Jaring" />
+
+  <meta property="og:title" content="Pickleball Samurai | Shop" />
+  <meta property="og:description" content="Browse products, filter by category, and view details in an accessible modal." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+
+  <script type="module" src="scripts/shop.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Pickleball Samurai home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">Pickleball Samurai</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Menu</span>
+        ☰
+      </button>
+
+      <nav id="primary-nav" class="nav" aria-label="Primary">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="shop.html" aria-current="page">Shop</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h1>Shop</h1>
+          <p>Filter products, open a product modal, and add items to your cart (saved in localStorage).</p>
+        </div>
+
+        <!-- CONTROLS -->
+        <div class="shop-controls">
+          <label class="control">
+            <span>Search</span>
+            <input id="searchInput" type="search" placeholder="Search socks, hoodies, jackets..." />
+          </label>
+
+          <label class="control">
+            <span>Category</span>
+            <select id="categorySelect">
+              <option value="all">All</option>
+            </select>
+          </label>
+
+          <label class="control">
+            <span>Level</span>
+            <select id="levelSelect">
+              <option value="all">All</option>
+              <option value="team">Team</option>
+              <option value="pro">Pro</option>
+            </select>
+          </label>
+
+          <label class="control">
+            <span>View</span>
+            <select id="viewSelect">
+              <option value="grid">Grid</option>
+              <option value="list">List</option>
+            </select>
+          </label>
+
+          <button id="clearBtn" class="btn outline" type="button">Clear</button>
+
+          <div class="cart-chip" aria-live="polite">
+            🛒 Cart: <span id="cartCount">0</span>
+          </div>
+        </div>
+
+        <div id="shopStatus" class="status" role="status" aria-live="polite"></div>
+
+        <!-- PRODUCTS -->
+        <div id="shopProducts" class="product-grid" data-view="grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAL -->
+  <dialog id="productModal" class="modal" aria-labelledby="modalTitle">
+    <div class="modal-inner">
+      <form method="dialog">
+        <button class="icon-btn" aria-label="Close dialog">✕</button>
+      </form>
+
+      <h2 id="modalTitle">Product</h2>
+      <p id="modalMeta" class="muted"></p>
+      <img id="modalImg" class="modal-img" alt="" loading="lazy" />
+      <p id="modalDesc"></p>
+      <p id="modalPrice" class="price"></p>
+
+      <div class="modal-actions">
+        <button id="modalAddBtn" class="btn" type="button">Add to Cart</button>
+        <form method="dialog"><button class="btn outline" type="submit">Close</button></form>
+      </div>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Pickleball Samurai</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="contact.html">Contact</a>
+        <a href="attributions.html">Attributions</a>
+        <a href="#" aria-label="Video demo link (add your YouTube/Loom later)">Video Demo</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

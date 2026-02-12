@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pickleball Samurai | Cart</title>
+
+  <meta name="description" content="View your cart and proceed to checkout." />
+  <meta name="author" content="Dan Jay Jaring" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+
+  <script type="module" src="scripts/cart.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Pickleball Samurai home">
+        <img class="brand-logo" src="images/logo.svg" alt="Pickleball Samurai logo" width="160" height="40">
+        <span class="brand-text">Pickleball Samurai</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Menu</span> ☰
+      </button>
+
+      <nav id="primary-nav" class="nav" aria-label="Primary">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="shop.html">Shop</a>
+        <a class="nav-link" href="cart.html" aria-current="page">Cart (<span id="cartCount">0</span>)</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h1>Your Cart</h1>
+          <p>Items are saved in localStorage. You can remove items or clear the cart.</p>
+        </div>
+
+        <div id="cartStatus" class="status" role="status" aria-live="polite"></div>
+
+        <div class="panel">
+          <div id="cartItems"></div>
+
+          <div class="cart-total">
+            <p><strong>Total:</strong> <span id="cartTotal">$0.00</span></p>
+            <div class="cart-actions">
+              <button id="clearCartBtn" class="btn outline" type="button">Clear Cart</button>
+              <a class="btn" href="contact.html">Checkout</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Pickleball Samurai</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="attributions.html">Attributions</a>
+        <a href="#" aria-label="Video demo link (add your YouTube/Loom later)">Video Demo</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
