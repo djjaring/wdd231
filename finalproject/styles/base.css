@@ -94,7 +94,11 @@ img{ max-width: 100%; display: block; }
   border-radius: 10px;
 }
 .nav-link:hover{ background: rgba(255,255,255,.06); }
-.nav-link[aria-current="page"]{ background: rgba(225,29,72,.18); }
+.nav-link[aria-current="page"]{
+  background: rgba(225,29,72,.45);
+  color: #ffffff;
+}
+
 
 @media (min-width: 760px){
   .nav-toggle{ display: none; }
@@ -139,8 +143,9 @@ img{ max-width: 100%; display: block; }
 .band{
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  background: rgba(255,255,255,.03);
+  background: #101522;
 }
+
 .band-inner{ text-align: center; }
 .band-title{ margin: 0; }
 .band-sub{ margin: .35rem 0 1rem; color: var(--muted); }
