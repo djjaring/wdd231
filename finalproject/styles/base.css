@@ -70,12 +70,7 @@ img{ max-width: 100%; display: block; }
   color: var(--text);
   font-weight: 800;
 }
-.brand-mark{
-  width: 34px;
-  height: 34px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-}
+
 .nav-toggle{
   border: 1px solid var(--line);
   background: transparent;
@@ -125,13 +120,7 @@ img{ max-width: 100%; display: block; }
   align-items: center;
   flex-wrap: wrap;
 }
-.hero-art{
-  border: 1px solid var(--line);
-  background: radial-gradient(circle at top, rgba(245,158,11,.15), transparent 55%);
-  border-radius: var(--radius);
-  min-height: 180px;
-  overflow: hidden;
-}
+
 .hero-placeholder{
   padding: 2.2rem 1.2rem;
   color: var(--muted);
@@ -518,10 +507,17 @@ img{ max-width: 100%; display: block; }
   border-bottom:1px solid var(--line);
 }
 .hero-art{
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid var(--line);
+  background: radial-gradient(circle at top, rgba(245,158,11,.15), transparent 55%);
+  border-radius: var(--radius);
+  min-height: 180px;
+  overflow: hidden;
 }
+
 
 .hero-image{
   width: 100%;
@@ -596,4 +592,9 @@ img{ max-width: 100%; display: block; }
 }
 h1, h2, h3, .brand-text{
   font-family: 'Oswald', sans-serif;
+}
+.card button:focus-visible{
+  outline: 2px solid var(--accent2);
+  outline-offset: 3px;
+  border-radius: 12px;
 }
