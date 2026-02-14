@@ -606,7 +606,7 @@ h1, h2, h3, .brand-text{
 /* Make Contact form dropdown options readable */
 .form select {
   color-scheme: dark;
-  background: #0f141c;
+  background: #1c0f18;
   color: var(--text);
 }
 
