@@ -603,3 +603,14 @@ h1, h2, h3, .brand-text{
   outline-offset: 3px;
   border-radius: 12px;
 }
+/* Make Contact form dropdown options readable */
+.form select {
+  color-scheme: dark;
+  background: #0f141c;
+  color: var(--text);
+}
+
+.form select option {
+  background: #0f141c;
+  color: var(--text);
+}

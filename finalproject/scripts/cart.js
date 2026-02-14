@@ -2,8 +2,8 @@
 
 const CART_KEY = "ps_cart";
 
-function money(n){
-  return new Intl.NumberFormat("en-US", { style:"currency", currency:"USD" }).format(n);
+function money(n) {
+  return new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(n);
 }
 
 function initNav() {
@@ -21,42 +21,52 @@ function initNav() {
   }
 }
 
-function getCart(){
-  try{
+function getCart() {
+  try {
     const raw = localStorage.getItem(CART_KEY);
     const cart = raw ? JSON.parse(raw) : [];
     return Array.isArray(cart) ? cart : [];
-  }catch{
+  } catch {
     return [];
   }
 }
 
-function setCart(cart){
+function setCart(cart) {
   localStorage.setItem(CART_KEY, JSON.stringify(cart));
-  updateCartCount();
+  updateCartCounts();
   render();
 }
 
-function updateCartCount(){
-  const countEl = document.querySelector("#cartCount");
-  if (!countEl) return;
-  countEl.textContent = String(getCart().length);
+/* ✅ Updates EVERY counter:
+   - <span data-cart-count>...</span>
+   - and also supports old <span id="cartCount">...</span> */
+function updateCartCounts() {
+  const count = getCart().length;
+
+  document.querySelectorAll("[data-cart-count]").forEach((el) => {
+    el.textContent = String(count);
+  });
+
+  const legacy = document.querySelector("#cartCount");
+  if (legacy) legacy.textContent = String(count);
 }
 
-function render(){
+function render() {
   const itemsWrap = document.querySelector("#cartItems");
   const totalEl = document.querySelector("#cartTotal");
   const status = document.querySelector("#cartStatus");
 
   const cart = getCart();
 
-  if (status){
-    status.textContent = cart.length ? `You have ${cart.length} item(s) in your cart.` : "Your cart is empty.";
+  if (status) {
+    status.textContent = cart.length
+      ? `You have ${cart.length} item(s) in your cart.`
+      : "Your cart is empty.";
   }
 
   if (!itemsWrap || !totalEl) return;
 
-  if (!cart.length){
+  if (!cart.length) {
     itemsWrap.innerHTML = "<p class='muted'>No items yet. Go to the Shop and add products.</p>";
     totalEl.textContent = money(0);
     return;
@@ -64,7 +74,9 @@ function render(){
 
   const total = cart.reduce((sum, item) => sum + Number(item.price || 0), 0);
 
-  itemsWrap.innerHTML = cart.map((item, index) => `
+  itemsWrap.innerHTML = cart
+    .map(
+      (item, index) => `
     <div class="cart-row">
       <div>
         <p class="cart-name"><strong>${item.name}</strong></p>
@@ -72,7 +84,9 @@ function render(){
       </div>
       <button class="small-btn" type="button" data-remove="${index}">Remove</button>
     </div>
-  `).join("");
+  `
+    )
+    .join("");
 
   totalEl.textContent = money(total);
 
@@ -90,5 +104,5 @@ document.querySelector("#clearCartBtn")?.addEventListener("click", () => {
 });
 
 initNav();
-updateCartCount();
+updateCartCounts();
 render();

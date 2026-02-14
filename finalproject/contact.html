@@ -11,12 +11,13 @@
   <meta property="og:title" content="Pickleball Samurai | Contact" />
   <meta property="og:description" content="Send a message to Pickleball Samurai support and get a fast response." />
   <meta property="og:type" content="website" />
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
 
-  <link rel="icon" href="images/samurai-logo.png" type="image/png" />
+  <link rel="icon" href="images/samurai-logo.webp" type="image/webp" />
   <link rel="stylesheet" href="styles/normalize.css" />
   <link rel="stylesheet" href="styles/base.css" />
 
@@ -28,12 +29,14 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <img src="images/samurai-logo.webp"
-         alt="Pickleball Samurai logo"
-         lass="brand-logo"
-         width="34"
-         height="34">
+      <a class="brand" href="index.html" aria-label="Pickleball Samurai home">
+        <img
+          src="images/samurai-logo.webp"
+          alt="Pickleball Samurai logo"
+          class="brand-logo"
+          width="34"
+          height="34"
+        >
         <span class="brand-text">Pickleball Samurai</span>
       </a>
 
@@ -44,7 +47,7 @@
       <nav id="primary-nav" class="nav" aria-label="Primary">
         <a class="nav-link" href="index.html">Home</a>
         <a class="nav-link" href="shop.html">Shop</a>
-        <a class="nav-link" href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+        <a class="nav-link" href="cart.html">Cart (<span data-cart-count>0</span>)</a>
         <a class="nav-link" href="about.html">About</a>
         <a class="nav-link" href="contact.html" aria-current="page">Contact</a>
       </nav>
@@ -115,21 +118,20 @@
   </main>
 
   <footer class="site-footer">
-  <div class="container footer-inner">
-    <p>&copy; <span id="year"></span> Pickleball Samurai</p>
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Pickleball Samurai</p>
 
-    <nav class="footer-nav" aria-label="Footer">
-      <a href="contact.html">Contact</a>
-      <a 
-        href="https://www.loom.com/share/c16cd02607e748909854778a8a5584b3" 
-        target="_blank" 
-        rel="noopener noreferrer"
-      >
-        🎥 Final Project Video Demo
-      </a>
-    </nav>
-  </div>
-</footer>
-
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="contact.html">Contact</a>
+        <a
+          href="https://www.loom.com/share/c16cd02607e748909854778a8a5584b3"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          🎥 Final Project Video Demo
+        </a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>
